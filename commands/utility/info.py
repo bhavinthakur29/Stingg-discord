@@ -92,3 +92,7 @@ async def server(ctx):
     embed.add_field(name="\n\n__Additional__", value=f'**Channels:** {len(guild.channels)}\n**Roles:** {len(guild.roles)}\n**Verification Level:** {str(verification).title()}\n**Upload Limit:** {"No Boosts Available" if "NitroBoost" not in guild.features else guild.max_upload_size}\n**Inactive Channel:** {guild.afk_channel.mention}\n**System Messages Channel:** {guild.system_channel.mention}\n**Explicit Media Content Filter:** {":white_check_mark:" if guild.explicit_content_filter else ":x:"}\n**Boost Status:** {f"Level: {guild.premium_tier} [:sparkles: {guild.premium_subscription_count} boosts]"}\n**2FA Requirement:** {auth}\n**Default Notifications:** {notifications}\n**Emojis:** {len(guild.emojis)}', inline=False)
     
     await ctx.send(embed=embed)
+
+
+async def setup(bot):
+    bot.add_command(info)

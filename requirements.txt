@@ -1,6 +1,11 @@
 discord.py
-asyncio
-python-dotenv
-datetime
 googletrans
-pynacl
+PyNaCl
+python-dotenv
+Requests
+youtube_dl
+deep-translator
+langdetect
+langcodes
+pymongo[srv]
+certifi

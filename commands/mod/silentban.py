@@ -14,3 +14,6 @@ async def silentban(ctx, user: discord.User):
     except discord.Forbidden:
         embed = discord.Embed(title="Silent Ban User", description="You don't have the required permissions to ban users.", color=discord.Color.red())
         await ctx.send(embed=embed)
+
+async def setup(bot):
+    bot.add_command(silentban)

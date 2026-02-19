@@ -61,3 +61,7 @@ async def remove_role(ctx, member: discord.Member, *roles: discord.Role):
             color=discord.Color.orange()
         )
         await ctx.send(embed=embed)
+
+
+async def setup(bot):
+    bot.add_command(role)

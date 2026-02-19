@@ -17,3 +17,7 @@ async def firstmsg(ctx):
 
     embed = discord.Embed(title="First Message", description="Click the button below to go to the first message in this channel:", color=discord.Color.blue())
     await ctx.send(embed=embed, view=view)
+
+
+async def setup(bot):
+    bot.add_command(firstmsg)

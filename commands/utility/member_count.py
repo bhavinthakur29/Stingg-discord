@@ -9,3 +9,7 @@ async def member_count(ctx):
     
     embed = discord.Embed(title='Member Count', description=f':100: : {total_members} members\n:man_bowing: : {total_humans} humans\n:robot: : {total_bots} bots', color=discord.Color.blue())
     await ctx.send(embed=embed)
+
+
+async def setup(bot):
+    bot.add_command(member_count)

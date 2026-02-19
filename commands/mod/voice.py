@@ -98,3 +98,7 @@ async def move(ctx, target_channel: discord.VoiceChannel):
     for member in members:
         await member.move_to(target_channel)
     await ctx.send(f'Successfully moved all users from {ctx.author.voice.channel.mention} to {target_channel.mention}.')
+
+
+async def setup(bot):
+    bot.add_command(voice)

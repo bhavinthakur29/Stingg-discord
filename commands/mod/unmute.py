@@ -12,3 +12,7 @@ async def unmute(ctx, user: discord.Member):
 
     await user.remove_roles(mute_role, reason=f"Unmuted by {ctx.author.name}.")
     await ctx.send(f"{user.mention} has been unmuted.")
+
+
+async def setup(bot):
+    bot.add_command(unmute)

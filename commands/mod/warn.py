@@ -33,3 +33,8 @@ async def setmaxwarns(ctx, limit: int):
 
     max_warns = limit
     await ctx.send(f"The maximum allowed warns for all users has been set to {limit}.")
+
+
+async def setup(bot):
+    bot.add_command(warn)
+    bot.add_command(setmaxwarns)

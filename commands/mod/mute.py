@@ -43,5 +43,6 @@ async def mute(ctx, user: discord.Member, duration: str = None):
         if mute_role in user.roles:
             await user.remove_roles(mute_role, reason=f"Unmuted automatically after {duration}.")
 
-def setup(bot):
+
+async def setup(bot):
     bot.add_command(mute)

@@ -32,3 +32,7 @@ async def timer(ctx, duration: str):
         await message.edit(embed=embed)
 
     await ctx.send(f"{ctx.author.mention}, your timer has ended!", delete_after=10)
+
+
+async def setup(bot):
+    bot.add_command(timer)

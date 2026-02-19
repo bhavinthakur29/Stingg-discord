@@ -10,3 +10,7 @@ async def uptime(ctx):
     uptime_seconds = int(current_time - start_time)
     uptime_str = time.strftime("%H:%M:%S", time.gmtime(uptime_seconds))
     await ctx.send(embed=discord.Embed(title=':green_circle: UPTIME',description=f"**I have been running for: `{uptime_str}`**", color=discord.Color.green()))
+
+
+async def setup(bot):
+    bot.add_command(uptime)

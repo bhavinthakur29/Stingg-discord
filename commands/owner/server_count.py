@@ -5,7 +5,7 @@ from discord.ext import commands
 @commands.is_owner()
 async def server(ctx):
     available_subcommands = [command.name for command in server.commands]
-    embed = discord.Embed(title='Available subcommands for `info`', description="\n".join(available_subcommands), color=discord.Colour.blue())
+    embed = discord.Embed(title='Available subcommands for `server`', description="\n".join(available_subcommands), color=discord.Colour.blue())
     await ctx.send(embed=embed)
 
 @server.command(description="Display the number of servers the bot is in.")
@@ -21,3 +21,7 @@ async def names(ctx):
     server_names = [guild.name for guild in ctx.bot.guilds]
     formatted_names = "\n".join(server_names)
     await ctx.send(embed=discord.Embed(title='Server Names', description=f"```{formatted_names}```", color=discord.Color.blue()))
+
+
+async def setup(bot):
+    bot.add_command(server)

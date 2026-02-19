@@ -1,0 +1,29 @@
+# Ignore Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variable files
+.env
+
+# Ignore documentation files
+README.md
+LICENSE
+
+# Ignore virtual environment folder (if you have one)
+venv/
+env/
+
+# Ignore any other potentially sensitive or unnecessary files
+*.log
+*.db
+*.sqlite3
+*.bak
+*.swp
+
+# Ignore IDE/editor configuration files (if applicable)
+.vscode/
+.idea/
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
